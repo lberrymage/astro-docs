@@ -181,7 +181,7 @@ Astro injects `id` attributes after your custom plugins have run, so any ID set 
       markdown: {
         processor: satteri({
           hastPlugins: [
-            satteriHeadingIdsPlugin(),
+            () => satteriHeadingIdsPlugin(),
             otherPluginThatReliesOnHeadingIDs,
           ],
         }),
